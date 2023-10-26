@@ -23,3 +23,17 @@ function addArray(arr)
 addArray(newArray)
 // Here, addArray ----> reference
 // and, addArray() ------> execution
+
+// Funnctions with objects
+let instaUser = {
+    name : "Pradeep Singh",
+    username : "kanha_thakurr",
+    graduated : true, 
+    followers : 148
+}
+
+function userInfo(obj)
+{
+    console.log(`${obj.name} is the user of Instagram and he has ${obj.followers} followers..`);
+}
+userInfo(instaUser)
