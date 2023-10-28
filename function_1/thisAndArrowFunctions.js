@@ -9,3 +9,16 @@ let obj = {
     }
 }
 obj.checkLocality()
+
+// Arrow functions...
+let haveId = true
+const isNewUser = () => {
+    if(haveId = true)
+    {
+        console.log(`Redirect him/her to login page...`);
+    }
+    else{
+        console.log(`Redirect him/her to signUp page...`);
+    }
+}
+isNewUser()
