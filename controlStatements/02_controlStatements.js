@@ -9,3 +9,8 @@ let college = null
 let defaultCollege = "D S College"
 let result = college ?? defaultCollege
 console.log(result);
+
+let city = undefined
+let defaultCity = "Aligarh"
+let result2 = city ?? defaultCity
+console.log(result2);
