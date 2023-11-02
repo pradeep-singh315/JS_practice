@@ -7,4 +7,12 @@ para.style.color = "#fff"
 
 const allButtons = document.getElementsByClassName("btn")
 
-allButtons[0].style.backgroundColor = "salmon"
+//allButtons[0].style.backgroundColor = "salmon"
+
+const arrNew = Array.from(allButtons)
+arrNew.forEach((element) => {
+    element.style.borderRadius = "40px"
+    element.style.backgroundColor = "orange"
+    element.style.color = "white"
+    element.style.padding = "19px"
+})
