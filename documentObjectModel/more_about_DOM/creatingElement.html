@@ -45,5 +45,22 @@
         secondLI.textContent = `${content}`
     }
     editTwo("React JS")
+
+    // Editing with another method
+    const editThree = (content) => {
+        const thirdLI = document.querySelector("li:nth-child(3)")
+        thirdLI.outerHTML = `<li> ${content} </li>`
+    }
+    editThree("Angular JS")
+
+    // Editing with another method
+    const editFour = (content) => {
+        const fifthLI = document.querySelector("li:last-child")
+        fifthLI.replaceWith(`${content}`)
+    }
+    editFour("C#")
+
+    // Deleting an existing child
+    document.querySelector("li:last-child").remove()
 </script>
 </html>
