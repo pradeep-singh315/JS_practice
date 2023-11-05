@@ -21,6 +21,15 @@
     addLanguage("PHP")
     addLanguage("Python")
 
-    
+    // Adding new element from new method--------------
+    function newAddFunction(langName)
+    {
+        newLi = document.createElement('li')
+        const addText = document.createTextNode(langName)
+        newLi.appendChild(addText)
+        document.querySelector(".li-container").appendChild(newLi)
+    }
+    newAddFunction("Kotlin")
+    newAddFunction("VB Script")
 </script>
 </html>
