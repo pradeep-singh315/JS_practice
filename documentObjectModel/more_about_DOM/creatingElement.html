@@ -31,5 +31,19 @@
     }
     newAddFunction("Kotlin")
     newAddFunction("VB Script")
+
+    // Edit the existing content
+    const editOne = (content) =>{
+        const firstLI = document.querySelector("li:first-child")
+        firstLI.innerHTML = `${content}`
+    }
+    editOne("C++")
+
+    // Editing with another method
+    const editTwo = (content) => {
+        const secondLI = document.querySelector("li:nth-child(2)")
+        secondLI.textContent = `${content}`
+    }
+    editTwo("React JS")
 </script>
 </html>
