@@ -7,11 +7,21 @@
 </head>
 <body>
     <h1>Adding Event Listeners</h1>
-    <button class="btns" id="btn-1">This is Button - 1</button>
+    <button class="btns" id="btn-1" onclick="alert(`BUtton-1 has clicked`)">This is Button - 1</button>
     <button class="btns" id="btn-2">This is Button - 2</button>
     <button class="btns" id="btn-3">This is Button - 3</button>
     <button class="btns" id="btn-4">This is Button - 4</button>
     <button class="btns" id="btn-5">This is Button - 5</button>
     <button class="btns" id="btn-6">This is Button - 6</button>
 </body>
+<script>
+    const btnClass = document.querySelector(".btns")
+    btnClass.style.padding = "15px"
+    btnClass.style.backgroundColor = "#212121"
+    btnClass.style.color = "#fff"
+    btnClass.style.borderRadius = "10px"
+
+    // First approach ------------------
+    // Adding onclick event as an attribute in button tag
+</script>
 </html>
