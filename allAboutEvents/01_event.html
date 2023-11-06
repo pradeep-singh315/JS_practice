@@ -15,13 +15,18 @@
     <button class="btns" id="btn-6">This is Button - 6</button>
 </body>
 <script>
-    const btnClass = document.querySelector(".btns")
-    btnClass.style.padding = "15px"
-    btnClass.style.backgroundColor = "#212121"
-    btnClass.style.color = "#fff"
-    btnClass.style.borderRadius = "10px"
+    const firstButton = document.querySelector(".btns")
+    firstButton.style.padding = "15px"
+    firstButton.style.backgroundColor = "#212121"
+    firstButton.style.color = "#fff"
+    firstButton.style.borderRadius = "10px"
 
     // First approach ------------------
     // Adding onclick event as an attribute in button tag
+
+    // Second Approach -------------------
+    // .onclick()
+    const thirdButton = document.querySelector("#btn-3")
+    thirdButton.onclick = () => alert(` Button - 3  has clicked`)
 </script>
 </html>
