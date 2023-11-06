@@ -33,5 +33,13 @@
     // addEventListener
     const fifthButton = document.querySelector("#btn-5")
     fifthButton.addEventListener('click', () => {alert(`Button - 5 has clicked..`)})
+
+    // Event Object -------------------
+    const lastButton = document.querySelector("#btn-6")
+    lastButton.addEventListener('click', (e) => {
+        alert(`Button-6 has clicked...`)
+        console.log(e);
+
+    })
 </script>
 </html>
