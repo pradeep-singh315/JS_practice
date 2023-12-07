@@ -5,7 +5,8 @@ console.log(balance)
 
 console.log(balance.toFixed(2));
 console.log(balance.toString());
-console.log(balance.toPrecision(2));  //return answer in string format
+console.log(balance.toPrecision(2)); 
+console.log(balance.toPrecision(1)); //return answer in string format
 console.log(balance.toLocaleString());
 
 const newNumber = 100000000
