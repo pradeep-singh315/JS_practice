@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise</title>
+</head>
+<body>
+    <h1>Pradeep Thakur</h1>
+</body>
+<script>
+    let h1 = document.querySelector("h1")
+
+    const colorChange = (changingColor, delay) => {
+         return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                h1.style.color = changingColor
+                resolve("color changed")
+            }, delay)
+        })
+    }
+
+    colorChange("red", 1000)
+    .then(() => {
+        console.log("Red color changed successfully...");
+        return colorChange("blue", 1000)
+    })
+    .then(() => {
+        console.log("Blue color changed successfully...");
+        return colorChange("green", 1000)
+    })
+    .then(() => {
+        console.log("Green color changed successfully...");
+        return colorChange("orange", 1000)
+    })
+    .then(() => {
+        console.log("Orange color changed successfully...");
+        return colorChange("grey", 1000)
+    })
+    .then(() => {
+        console.log("Grey color changed successfully...");
+    })
+</script>
+</html>
