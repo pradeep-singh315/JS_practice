@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callback Hell in more deatil....</title>
+</head>
+<body>
+    <h1>Callback Hell</h1>
+</body>
+<script>
+    // const dataSpeed = Math.floor(Math.random() * 10) + 1
+
+    // const dataToDB = (data) => {
+    //     if(dataSpeed <= 4)
+    //     {
+    //         console.log("Failure: data did not saved", data);
+    //     }
+    //     else{
+    //         console.log("Success : data saved", data);
+    //     }
+    // }
+    // dataToDB("Pradeep Thakur")
+
+    const dataToDB = (data, success, failure) => {
+        const dataSpeed = Math.floor(Math.random() * 10) + 1
+
+        if(dataSpeed <= 4) failure()
+        else success()
+    }
+
+    dataToDB("Pradeep Thakur", () => {
+        console.log("Success1 : data saved")
+        dataToDB("Kanha Thakur", () => {
+            console.log("Success2 : data saved");
+            dataToDB("Pradeep Singh", () => {
+                console.log("Success3 : data saved");
+                dataToDB("Lavkush Singh", () => {
+                    console.log("Success4 : data saved");
+                },
+                () => {
+                    console.log("Failure4 : data could not saved");
+                })
+            },
+            () => {
+                console.log("Failure3 : data could not saved");
+            })
+        },
+        () => {
+            console.log("Failure2 : data could not saved");
+        })
+        },
+        () => {
+            console.log("Failure1 : data could not saved");
+        })
+</script>
+</html>
