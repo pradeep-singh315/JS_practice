@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise</title>
+</head>
+<body>
+    <h1>Promise in JS</h1>
+</body>
+<script>
+    const dataSaveToDB = (data) => {
+        return new Promise((resolve, reject) => {
+        let dataSpeed = Math.floor(Math.random() * 10) + 1
+        if(dataSpeed < 5)
+        {
+            resolve("Success: data saved", data)
+        }
+        else{
+            reject("Failure: weak connection", data)
+        }
+    });
+}
+
+// dataSaveToDB("Pradeep Thakur")
+// .then(() => {
+//     console.log("Promise resolved");
+// })
+// .catch(() => {
+//     console.log("Promise rejected");
+// })
+
+// Promise chaining --------
+dataSaveToDB("Pradeep Singh")
+.then(() => {
+    console.log("Success : data saved");
+    return dataSaveToDB("Delta")
+})
+.then(() => {
+    console.log("Success 2 : data daved");
+    return dataSaveToDB("Alpha")
+})
+.then(() => {
+    console.log("Success 3 : data saved");
+})
+.catch(() => {
+    console.log("Failure : weak connection");
+})
+
+
+
+</script>
+</html>
