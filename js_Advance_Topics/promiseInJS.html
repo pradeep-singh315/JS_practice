@@ -32,19 +32,23 @@
 
 // Promise chaining --------
 dataSaveToDB("Pradeep Singh")
-.then(() => {
+.then((result) => {
     console.log("Success : data saved");
+    console.log("Result of Promise : ", result);
     return dataSaveToDB("Delta")
 })
-.then(() => {
+.then((result) => {
     console.log("Success 2 : data daved");
+    console.log("Result of Promise : ", result)
     return dataSaveToDB("Alpha")
 })
-.then(() => {
+.then((result) => {
     console.log("Success 3 : data saved");
+    console.log("Result of Promise : ", result)
 })
-.catch(() => {
+.catch((error) => {
     console.log("Failure : weak connection");
+    console.log("Error of Promise : ", error)
 })
 
 
